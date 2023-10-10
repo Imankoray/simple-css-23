@@ -1,0 +1,82 @@
+body{
+background-color: aliceblue;
+margin: 0;
+/* uses flex to maintain vertical and horizontal centering of master container */
+display: flex;
+/* center horizontally */
+align-items: center;
+/* center vertically */
+justify-content: center;
+/* must specify height for vertical centering to work */
+height: 100vh;
+
+}
+#container{
+    /* fix dimension of master */
+width: 700px;
+height: 600px;
+background-color: rgb(196, 203, 204);
+/* add drop shadow */
+filter: drop-shadow(0px 0px 10px rgb(26, 26, 26));
+
+}
+
+#days-container{
+    /* use flex to arranage days as a row */
+    display:flex;
+}
+.day{
+    /* constrain dimensions of each day to match width and height */
+    width: 100px;
+    height: 100px;
+}
+.button:hover{
+    /* changes day color on rollover */
+    background-color: rgba(13, 29, 8, 0.589);
+}
+.button:active:active{
+    /* changes day colour on selection */
+    background-color: rgb(31, 105, 64);
+}
+h4{
+    /* style all h4 text elements */
+    font-size: 24px;
+    text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #2e2522;
+    /* center text horizontally */
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+#city-text{
+    /* match the line height to font size for better control of positioning */
+    font-size: 40px;
+    line-height: 40px;
+    /* postion the city text by using simple offset values */
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.37);
+}
+#hero-container{
+    /* the parent of an absolutely positoned element must be relative */
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+#hero-image{
+    /* prevent the image from distorting when scaling */
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+}
+.weather-icon{
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+}
